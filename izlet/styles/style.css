@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.content {
+    background-image: url('../images/izletbg.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr 240px;
+    grid-template-rows:  20px 60px auto 60px;
+    grid-gap: 0;
+    grid-template-areas:
+        "l l l l"
+        ". h h s"
+        ". m m s"
+        "f f f s";
+}
+
+.line {
+    background-color: #141212;
+    grid-area: l;
+}
+header {
+    grid-area: h;
+    display: flex;
+    align-items: center;
+}
+
+.text-box {
+    grid-area: m;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.heading-main {
+    font-size: 6em;
+    letter-spacing: 30px;
+}
+
+.heading-sub {
+    letter-spacing: 5px;
+    opacity: 0.8;
+}
+
+.form-section {
+    grid-area: s;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.login_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    background-color: rgba(249, 250, 255, 0.4);
+}
+
+.login_form input {
+    background-color: rgba(249, 250, 255, 0.48);
+}
+
+.register_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    background-color: rgba(54, 52, 52, 0.52);
+}
+
+.register_form input {
+    background-color: rgba(123, 119, 119, 0.59);
+}
+
+input {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 40px;
+    border: none;
+    width: 200px;
+    color: #fff;
+}
+
+.colored_btn {
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.73) , rgba(255, 255, 0, 0.76));
+    margin: 25px 0;
+}
+footer {
+    grid-area: f;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page {
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 20px;
+    opacity: 0.8;
+}
+
+a:hover {
+    letter-spacing: 5px;
+}
