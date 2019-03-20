@@ -1,50 +1,66 @@
 body {
     margin: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
     color: #fff;
     box-sizing: border-box;
-}
-
-.content {
     background-image: url('../images/izletbg.jpeg');
-    background-size: cover;
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100vw;
-    height: 100%;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 200px 1fr 1fr 240px;
-    grid-template-rows:  20px 60px auto 60px;
-    grid-gap: 0;
-    grid-template-areas:
-        "l l l l"
-        ". h h s"
-        ". m m s"
-        "f f f s";
+    background-size: cover;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+h2 {
+   margin: 0; 
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0; 
 }
 
 .line {
-    background-color: #141212;
-    grid-area: l;
+    background-color: #000;
+    height: 20px;
 }
-header {
-    grid-area: h;
+
+.mobile-nav {
+    display: none;
+}
+.navbar {
+    padding-left: 10%;
     display: flex;
     align-items: center;
 }
 
+#logo {
+    background-color: #000;
+    padding: 15px 10px;
+    border-radius: 0 0 50px 50px;
+}
+
+
 .text-box {
-    grid-area: m;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: -30px;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 }
 
 .heading-main {
-    font-size: 6em;
+    font-size: 7em;
     letter-spacing: 30px;
 }
 
@@ -53,19 +69,39 @@ header {
     opacity: 0.8;
 }
 
-.form-section {
-    grid-area: s;
-    display: flex;
-    flex-direction: column;
+.bg-blur {
+    background: inherit;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -webkit-transform: translate3d(0, 0, 0);
+    overflow: hidden;
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    top: 20px;
+    right: 0;
+    overflow-x: hidden;
+    z-index: 1;
+    margin: 4px -4px;
 }
 
+.form-section {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    top: 20px;
+    right: 0;
+    overflow-x: hidden;
+    z-index: 2;
+}
 
 .login_form {
+    background-color: rgba(249, 250, 255, 0.5);
+    height: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5px;
-    background-color: rgba(249, 250, 255, 0.4);
+
 }
 
 .login_form input {
@@ -73,44 +109,72 @@ header {
 }
 
 .register_form {
+    background-color: rgba(54, 52, 52, 0.5);
+    height: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5px;
-    background-color: rgba(54, 52, 52, 0.52);
+
 }
 
 .register_form input {
     background-color: rgba(123, 119, 119, 0.59);
 }
 
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
 input {
-    margin: 5px;
+    width: 80%;
+    margin-top: 3px;
+    margin-bottom: 3px;
     padding: 5px;
     border-radius: 40px;
     border: none;
-    width: 200px;
+    
+}
+
+::-webkit-input-placeholder { /* Chrome */
+  color: grey;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: grey;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: grey;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: grey;
+}
+
+.login_form input:focus {
+    color: grey;
+}
+.register_form input:focus {
     color: #fff;
 }
 
+
 .colored_btn {
-    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.73) , rgba(255, 255, 0, 0.76));
-    margin: 25px 0;
-}
-footer {
-    grid-area: f;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-image: linear-gradient(to right, #ff587c, #ffb902);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #fff;
 }
 
-.page {
-    width: 70%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+
+footer {
+    box-sizing: border-box;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 10%;
+
 }
+
 
 a:link, a:visited {
     text-decoration: none;
@@ -120,5 +184,39 @@ a:link, a:visited {
 }
 
 a:hover {
-    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contact_btn {
+    background-color: #fff;
+    color: #191919;
+    width: 130px;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    font-weight: 700;
+    margin: 20px 0;
+    padding: 10px;
+    text-align: center;
+}
+
+#contact_btn:hover {
+    background-color: #191919;
+    color: #fff;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } 
 }

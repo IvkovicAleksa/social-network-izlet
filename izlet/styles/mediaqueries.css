@@ -1,47 +1,112 @@
-@media (min-width: 600px) and (max-width: 1036px) {
+@media (min-width: 800px) and (max-width: 1150px) {
     
-    .content {
-        width: 100vw;
-        display: grid;
-        grid-template-columns: 1fr 240px;
-        grid-template-rows:  20px 60px auto 60px;
-        grid-gap: 0;
-        grid-template-areas:
-            "l l"
-            "h s"
-            "m s"
-            "f s";
+    .bg-blur {
+         width: 25%;
     }
+    .form-section {
+        width: 25%;
+    }
+
+    footer {
+        width: 75%;
+    }
+    
+    .text-box {
+        align-items: flex-start;
+        padding-left: 20%;
+    }
+
     
 }
 
-
-@media (max-width: 600px) {
-    .content {
-        height: 100%;
-        grid-template-columns: 1fr;
-        grid-template-rows:  20px 60px auto 60px;
-        grid-gap: 0;
-        grid-template-areas:
-            "l"
-            "h"
-            "m"
-            "f";
+@media (min-width: 600px) and (max-width: 800px) {
+    
+    .bg-blur {
+         width: 30%;
     }
     
+    .form-section {
+        width: 30%;
+    }
+
+    footer {
+        width: 70%;
+        padding: 15px;
+    }
+    
+    .navbar {
+    padding-left: 0;
+
+    }
+    
+    .text-box {
+        text-align: left;
+        align-items: flex-start;
+        width: 300px;
+        padding-left: 15%;
+    }
+    
+    .heading-main {
+        font-size: 4em;
+    
+    }
+    
+    .heading-sub {
+        letter-spacing: 1px;
+    }
+
+}
+@media (max-width: 600px) {
+    
+    .line {
+        height: 30px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .navbar {
+        padding-left: 0;
+
+    }
+    
+    .mobile-nav {
+        display: block;
+    }
+    
+    .main-nav {
+        display: none;
+    }
+
     .text-box {
         display: none;
     }
     
+    .bg-blur {
+        display: none;
+    }
+    
     .form-section {
-        grid-area: m;
         z-index: 0;
+        margin-top: 30px;
+        position: static;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        width: auto;
+        
     }
     
     .login_form, .register_form {
         height: auto;
         margin: 10px auto;
-        padding: 5px 30px;
+        padding: 10px 30px;
+    }
+    
+    footer {
+        width: 100%;
     }
 
 }
