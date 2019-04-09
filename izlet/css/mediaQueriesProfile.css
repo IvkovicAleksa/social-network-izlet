@@ -1,0 +1,224 @@
+@media (min-width: 900px) and (max-width: 1300px) {
+    .wrapper {
+        margin: 0;
+        position: relative;
+        left: 30%;
+        top: 0;
+    }
+    
+    .header {
+        height: auto;
+    }
+    
+    .postdesno {
+        grid-template-rows: auto 1fr;
+    }
+}
+
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .sidebar {
+        display: none;
+    }
+    
+    .header {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        height: auto;
+    }
+    
+    #header {
+        transition: top 0.3s;
+    }
+    
+    .profil {
+        order: 2;
+    }
+    
+    .headerdesno {
+        order: 1;
+    }
+    .wrapper {
+        width: 100% !important;
+        margin: auto;
+        padding-bottom: 0;
+    }
+    
+    .post {
+        display: grid;
+        grid-template-columns: 100%;
+        width: 80%;
+        grid-gap: 15px;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .slika {
+        height: 350px;
+        width: 80%;
+        margin: auto;
+    }
+    .naslov {
+        margin: auto;
+    }
+    
+    .postBody {
+        height: auto;
+        padding-right: 20px;
+        width: 80%;
+        margin: auto;
+ 
+    }
+    
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px 0;
+        width: 100%;
+        background-color: black;
+    }
+    
+    footer a:link, 
+    footer a:visited {
+        text-decoration: none;
+        color: white;
+        font-size: 1.5em;
+    }
+    
+    footer a:hover, 
+    footer a:active { 
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 600px) {
+    
+    .sidebar {
+        display: none;
+    }
+    
+    .popup {
+        width: 300px;
+        margin-left: -150px;
+    }
+    
+    .cont {
+        width: 280px;
+        grid-template-rows: 270px 100px 40px;
+    }
+    
+    .header {
+        height: 60vh;
+    }
+    
+    #imageheaderedit {
+        display: grid;
+        padding: 10px;
+        grid-template-rows: 150px 50px;
+        grid-template-columns: 100%;   
+    }
+    
+    .poligonold {
+        display: inline-block;
+        position: relative;
+        left: 25%;
+        width: 138px;
+        height: 138px;
+        background: white;
+        box-sizing: border-box;
+        clip-path: circle();
+
+    }
+    
+    #input2 {
+        margin: 5px;
+        padding: 5px;
+        width: 250px;
+    }
+
+    #input3 {
+        margin: 5px;
+        padding: 5px;
+        width: 250px;
+        border: 0px solid grey;
+    }
+    form input {
+        padding-left: 20px;
+        padding-right: 5px;
+        margin-left: 5px;
+        width: 100px;
+    }
+    
+    #blue_btn2 {
+        padding: 0 5px;
+    }
+    
+    div.editbtn {
+       
+        margin-top: 20px;
+        
+    }
+    
+    #header {
+        transition: top 0.3s;
+    }
+    
+    .header {
+        display: grid;
+        grid-template-columns: 100% 0;
+    }
+    
+    .wrapper {
+        width: 100%;
+        min-width: 300px;
+        margin: auto;
+        padding-bottom: 0;
+    }
+    
+    .post {
+        display: grid;
+        grid-template-columns: 100%;
+        width: 80%;
+        grid-gap: 15px 0;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .slika {
+        height: 150px;
+        width: 80%;
+        margin: auto;
+    }
+    
+    .postBody {
+        height: auto;
+        padding-right: 20px;
+        margin: auto;
+ 
+    }
+    
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px 0;
+        width: 100%;
+        background-color: black;
+    }
+    
+    footer a:link, 
+    footer a:visited {
+        text-decoration: none;
+        color: white;
+        font-size: 1.5em;
+    }
+    
+    footer a:hover, 
+    footer a:active { 
+        font-size: 1.6em;
+    }
+
+}

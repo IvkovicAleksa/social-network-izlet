@@ -1,0 +1,582 @@
+body {
+    background-color: #d1d1d1;
+    font-family: 'Open-Sans', sans-serif;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
+
+
+/* pocetak */
+
+.sidebar {
+    position: fixed;
+    height: 100vh;
+    background-color: #efefef;
+    grid-row: 2/-1;
+    grid-column: 1/3;
+    display: grid;
+    grid-template-rows: repeat(5, 20%);
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    top: 0px;
+    bottom: 0px;
+    /* padding-bottom: 50px; */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.main-buttons {
+    width: 100%;
+    height: 200px;
+    grid-row: 2/3;
+    grid-column: 2/5;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: auto;
+}
+
+.sidebar div[id] {
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    width: 150px;
+    padding: 3px;
+    border-radius: 100px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#profileBtn {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #191919;
+    padding: 4px 15px;
+    font-weight: normal;
+}
+
+.BtnImg {
+    width: 23px;
+    border-radius: 100%;
+    border: 1px solid white;
+    margin: 0;
+    margin-right: 10px;
+}
+
+#dashboardBtn {
+    color: #506cdb;
+    border: 2px solid #506cdb;
+}
+
+#dashboardBtn:hover {
+    color: white;
+    background-color: #506cdb;
+}
+
+#newPostBtn {
+    color: white;
+    background-image: linear-gradient(to right, #ff587c, #ffb902);
+    padding: 5px;
+}
+
+.logoutWrap {
+    width: 100%;
+    height: 50px;
+    grid-row: 5/6;
+    grid-column: 2/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+}
+
+#logoutBtn {
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    padding: 3px 35px;
+    border-radius: 100px;
+    font-weight: bold;
+    margin: 5px;
+    border: 1px solid grey;
+    color: #efefef;
+    text-shadow: -1px -1px 0 grey, 1px -1px 0 grey, -1px 1px 0 grey, 1px 1px 0 grey;
+}
+
+#logoutBtn:hover {
+    background-color: #191919;
+    text-shadow: none;
+}
+
+
+/*zavrsetak */
+
+.line {
+    background-color: #000;
+    height: 20px;
+}
+
+.navbar {
+    padding-left: 10%;
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    background-color: #000;
+    padding: 15px 10px;
+    border-radius: 0 0 50px 50px;
+}
+
+
+/*pop-up css*/
+
+.popup {
+    z-index: 100;
+    width: 480px;
+    height: 520px;
+    background-color: rgb(240, 240, 240);
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    margin-left: -240px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    transition: all 300ms;
+    display: none;
+    border-radius: 5px;
+}
+
+.pozadina {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    display: none;
+}
+
+#x {
+    z-index: 999;
+    color: rgba(71, 70, 70, 0.8);
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    /* right: 130px; */
+    top: 5%;
+    right: 5%;
+}
+
+#imageheader {
+    position: relative;
+}
+
+#imageheaderedit {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 100%;
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.username {
+    background-color: #ffffff;
+    -moz-border-radius: 28px;
+    -webkit-border-radius: 28px;
+    border-radius: 28px;
+    display: inline-block;
+    color: #080808;
+    font-family: Arial;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 4px 25px;
+}
+
+.poligonold {
+    display: inline-block;
+    position: relative;
+    width: 138px;
+    height: 138px;
+    background: white;
+    box-sizing: border-box;
+    clip-path: circle();
+}
+
+.poligonold div {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 130px;
+    height: 130px;
+    -webkit-clip-path: circle();
+}
+
+.poligon {
+    display: inline-block;
+    position: relative;
+    width: 156px;
+    height: 156px;
+    background: white;
+    box-sizing: border-box;
+    clip-path: circle();
+}
+
+.poligon div {
+    position: absolute;
+    top: 5px;
+    /* equal to border thickness */
+    left: 5px;
+    /* equal to border thickness */
+    width: 146px;
+    /* container height - (border thickness * 2) */
+    height: 146px;
+    /* container height - (border thickness * 2) */
+    -webkit-clip-path: circle();
+}
+
+#edit {
+    margin-top: 20px;
+    padding: 8px 35px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    display: inline-block;
+}
+
+.status {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 3vh;
+}
+
+.dugmici2 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.cont {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 160px 210px 110px;
+    position: relative;
+}
+
+#input2 {
+    display: flex;
+    justify-content: flex-end;
+    border: 1px solid grey;
+    margin: 17px;
+    padding: 5px;
+    height: 20px;
+    border-radius: 15px;
+    /* padding-left: 15px; */
+    justify-content: center;
+    align-items: center;
+}
+
+#input3 {
+    display: flex;
+    justify-content: flex-end;
+    border: 1px solid grey;
+    margin: 17px;
+    padding: 5px;
+    height: 20px;
+    border-radius: 15px;
+    /* padding-left: 15px; */
+    justify-content: center;
+    align-items: center;
+}
+
+.fileup {
+    border-radius: 28px;
+}
+
+form input {
+    border: 0px solid white;
+    /* border-radius: 10px; */
+    padding-left: 10px;
+    padding-right: 20px;
+    margin-left: 30px;
+}
+
+#blue_btn {
+    background-color: #506CDB;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2px 0px;
+    color: #fff;
+    text-align: center;
+    border-radius: 40px;
+    width: 90%;
+}
+
+#blue_btn:hover {
+    box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+#blue_btn2 {
+    /* background-color: #fff; */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 90px;
+    color: black;
+    text-align: center;
+    /* border-radius: 40px; */
+    width: 90%;
+    /* border: 0.5px solid grey; */
+}
+
+#blue_btn2:hover {
+    box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+div.editbtn {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 0px;
+    margin-top: 60px;
+    padding: 15px 2px;
+}
+
+#submit {
+    background-color: black;
+    padding: 8px 25px;
+    color: #fff;
+    text-align: center;
+    border-radius: 40px;
+    width: 150px;
+    border: 0px;
+    margin-left: 0;
+}
+
+#submit:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    cursor: pointer;
+}
+
+.blur {
+    transition: all 300ms;
+}
+
+.wrapper {
+    padding-bottom: 50px;
+    width: 55%;
+    min-width: 500px;
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    background-color: white;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    width: 100%;
+    height: 50vh;
+    background: url('../images/pozadina.jpg') fixed no-repeat;
+    background-size: cover;
+}
+
+.profil {
+    display: grid;
+    color: white;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    background: inherit;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.profil::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    bottom: -20px;
+    right: -20px;
+    background: inherit;
+    box-shadow: inset 0 0 1000px rgb(82, 82, 82);
+    z-index: -1;
+    filter: blur(5px);
+}
+
+.puffer {
+    padding: 5vh 20px 20px 20px;
+    display: grid;
+    grid-template-rows: 50% 20% 30%;
+    color: white;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* #profilna {
+    max-width: 40%;
+    min-width: 30%;
+    clip-path: circle();
+} */
+
+.dugmici {
+    display: grid;
+    grid-gap: 5px;
+}
+
+.editbutton {
+    background-color: #000000;
+    -moz-border-radius: 28px;
+    -webkit-border-radius: 28px;
+    border-radius: 28px;
+    border: 1px solid black;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 4px 25px;
+    text-decoration: none;
+    transition: all 200ms;
+}
+
+.editbutton:hover {
+    background-color: #415cb6;
+    color: white;
+    border: white 1px solid;
+}
+
+.editbutton:active {
+    position: relative;
+    top: 1px;
+}
+
+main {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.post {
+    display: grid;
+    width: 80%;
+    grid-template-columns: 30% 65%;
+    grid-gap: 30px;
+    padding: 30px;
+    border-bottom: 1px solid gray;
+}
+
+.postlevo {
+    display: flex;
+    margin-bottom: 0px;
+    /* width: 100%; */
+    /* height: 100%; */
+    max-height: 170px;
+}
+
+.slika {
+    justify-self: end;
+    margin-bottom: 0px;
+    width: 100%;
+    height: 100%;
+    max-height: 170px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.postdesno {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 20% auto;
+    grid-gap: 15px;
+    overflow: hidden;
+}
+
+.naslov {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.postBody {
+    height: 100px;
+    margin-right: -100px;
+    padding-right: 100px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.post_dugmici {
+    display: grid;
+    grid-template-columns: 90% auto;
+    justify-items: start;
+    align-items: end;
+}
+
+#commentBtn {
+    align-self: center;
+    color: #506cdb;
+    background-color: white;
+    border: 1px solid #506cdb;
+}
+
+#commentBtn:hover {
+    color: white;
+    background-color: #506cdb;
+}
+
+.vote {
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 10px;
+}
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    border-style: inset;
+    border-width: 1px;
+}
+
+main {
+    min-height: 41vh;
+}
+
+p {
+    margin-top: 0;
+    padding-top: 0;
+}

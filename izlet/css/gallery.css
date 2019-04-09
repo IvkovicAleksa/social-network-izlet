@@ -1,0 +1,139 @@
+body {
+    margin: 0px 0px;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    box-sizing: border-box;
+    background-color: rgb(52, 52, 52);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+main {
+    padding-top: 24px;
+    background-color: rgb(52, 52, 52);
+    color: white;
+    margin-bottom: 3%;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    background-color: rgb(52, 52, 52);
+    padding: 2% 6%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 16%);
+    grid-template-rows: repeat(18, 40vh);
+    grid-gap: 1em 1em;
+    grid-column-gap: 1em;
+    padding-bottom: 24px;
+    margin-bottom: 20px;
+}
+
+.line {
+    background-color: #000;
+    height: 20px;
+}
+
+.navbar {
+    margin: 0px 0px;
+    padding-left: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(52, 52, 52, 0);
+}
+
+#logo {
+    background-color: #000;
+    padding: 15px 10px;
+    border-radius: 0 0 50px 50px;
+}
+
+.myButton {
+    margin: 20px 50px;
+    border-radius: 28px;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    padding: 6px 32px;
+    text-decoration: none;
+    background-image: linear-gradient(to right, #ff587c, #ffb902);
+    color: #fff;
+}
+
+.myButton:hover {
+    background-color: #ffab23;
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+}
+
+#g1,
+#g4,
+#ee {
+    grid-column: 1 / span 2;
+}
+
+#g2,
+#g5 {
+    grid-column: 3 / span 2;
+}
+
+#g3,
+#g6,
+#dd {
+    grid-column: 5 / span 2;
+}
+
+#first {
+    grid-column: 1 / span 4;
+}
+
+#last {
+    grid-column: 3 / span 4;
+}
+
+.butnav {
+    display: grid;
+    grid-template: 1fr / 1fr 3fr;
+}
+
+.title {
+    padding-top: 5px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.pink#cc {
+    grid-column: 3 / span 2;
+    grid-row: 5 / span 2;
+}
+
+.pink#cc2 {
+    grid-column: 3 / span 2;
+    grid-row: 11 / span 2;
+}
+
+.pink#cc3 {
+    grid-column: 3 / span 2;
+    grid-row: 17 / span 2;
+}
+
+div.green,
+div.blue,
+div.pink {
+    overflow: hidden;
+    background-size: cover;
+}

@@ -1,4 +1,5 @@
 <?php
+include('config/config.php');
 
 $registerMessage = false;
 
@@ -43,7 +44,8 @@ if(!empty($_POST['register'])) {
         $res_u = mysqli_query($conn, $sql_u);
         
         if (mysqli_num_rows($res_u) > 0) {
-            echo "Username already exists";
+            $registerMessage = "Username already exists";
+            header("Location: index.php?registerMessage=$registerMessage");
         } else {
         
         //SECURITY MEASURES
@@ -65,12 +67,18 @@ if(!empty($_POST['register'])) {
         $registerUser = mysqli_query($conn, $sql);
 
        if($registerUser === true){
-           $registerMessage = "Hi ".$username.", you have successfully registered!";
+        
+           $registerMessage = "Zdravo ".$username.", uspešno ste se registrovali!";
+           header("Location: index.php?registerMessage=$registerMessage");
        } else {
-           $registerMessage ="Error description: " . mysqli_error($conn);
+           $registerMessage = "Error description: " . mysqli_error($conn);
        }
+       echo $registerMessage;
+       
         }
        mysqli_close($conn);
+       
    }
  }
+
 ?>

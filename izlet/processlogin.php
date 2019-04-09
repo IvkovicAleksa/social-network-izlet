@@ -36,20 +36,24 @@ if($username && $password) {
             $_SESSION['userID'] = $row['userID'];
             $_SESSION['userimage'] = $row['userimage'];
             $_SESSION['firstname'] = $row['firstname'];
+            $_SESSION['displayname'] = $row['displayname'];
 
-            
             
             header('Location: dashboard.php');
         } else {
-
-            echo "Pogresna lozinka";
+            $obavestenje = "Pogrešna lozinka";
+           header("Location: index.php?obavestenje=$obavestenje");
         }
     } else {
-        echo "Pogresni podaci";
+        $obavestenje = "Pogrešni podaci";
+           header("Location: index.php?obavestenje=$obavestenje");
+        
     }
     mysqli_close($db);
 } else {
-    echo "Niste popunili sva polja";
+    $obavestenje = "Niste popunili sva polja";
+           header("Location: index.php?obavestenje=$obavestenje");
+   
 }
 
 
